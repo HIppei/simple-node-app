@@ -1,11 +1,5 @@
-## Simple Node Project
+## Simple Node App
 
-## How to start
+### How to start
 
-```bash
-npm i
-```
-
-```
-npm run start
-```
+Execute `npm run start` in your shell, then visit `http://localhost:3000`.
