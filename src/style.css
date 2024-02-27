@@ -1,0 +1,41 @@
+#dialog {
+  /* 初期状態では非表示 */
+  opacity: 0; 
+  visibility: hidden; 
+  transition: all 0.3s ease-out;
+  position: fixed; /* 絶対位置で表示 */
+  top: 50%; /* 上端を中央に */
+  left: 50%; /* 左端を中央に */
+  /* 上記までで、エレメント左上が中央に位置することになる */
+  /* 再配置を行うtranslateで、エレメントをその大きさの半分ずつ左と上にずらす */
+  /* これにより、エレメントの中心がWindowの中心に位置することになる。*/
+  z-index: 1000; /* 他の要素よりも手前に表示する */
+  transform: translate(-50%, -50%);
+  width: 30%; 
+  height: 30%;
+  border: 1px solid black;
+  background-color: lightblue;
+}
+
+#overlay {
+  /* 初期状態では非表示 */
+  /* visibility: hidden;を設定することでOpenボタンを活性にできます。*/
+  opacity: 0; 
+  visibility: hidden; 
+  transition: all 0.3s ease-out;
+  position: fixed; /* 絶対位置で表示 */
+  /* 画面全体を覆う */
+  /* Browser windowの左上から、縦横一面の大きさを設定し配置 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999; /* 他の要素よりも手前に表示する。ただし、ダイアログの背面 */
+  background-color: lightgray;
+}
+
+#open-button {
+  cursor: pointer;
+  border: 1px solid #000;
+  margin: 10px;
+}
